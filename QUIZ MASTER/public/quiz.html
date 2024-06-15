@@ -186,7 +186,7 @@
         });
 
         async function startTimer() {
-            const response = await fetch('http://localhost:3000/timer');
+            const response = await fetch('ecell-seven.vercel.app/timer');
             const data = await response.json();
             let timer = data.remainingTime;
 
@@ -230,7 +230,7 @@
 
         async function sendTheAnswers() {
             try {
-                const response = await fetch('http://localhost:3000/responses', {
+                const response = await fetch('ecell-seven.vercel.app/responses', {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
@@ -257,7 +257,7 @@
 
         async function fetchQuestions() {
             try {
-                const response = await fetch('http://localhost:3000/questions');
+                const response = await fetch('ecell-seven.vercel.app/questions');
                 const data = await response.json();
                 questions = data.questions;
                 startTimer();
@@ -270,7 +270,7 @@
 
         async function sendPartialResponses() {
             try {
-                const response = await fetch('http://localhost:3000/responses', {
+                const response = await fetch('ecell-seven.vercel.app/responses', {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
